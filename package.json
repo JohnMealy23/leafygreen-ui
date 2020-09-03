@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export -o hosting/files/",
     "release:web": "gh-pages -b website --dist .",
-    "start": "next start", 
-    "confused": "gh-pages --help"
+    "start": "next start"
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
