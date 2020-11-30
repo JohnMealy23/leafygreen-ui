@@ -1,5 +1,5 @@
-import { Body } from '@leafygreen-ui/typography';
+import React from 'react';
 
 export default function Home() {
-  return <Body>Hello, World!</Body>;
+  return <div>this is the home page</div>;
 }
