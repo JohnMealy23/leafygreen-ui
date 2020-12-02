@@ -79,6 +79,7 @@ type GroupType = typeof GroupType[keyof typeof GroupType];
 
 function Content({ isTouchDevice = false }: { isTouchDevice?: boolean }) {
   const router = useRouter();
+  const activeType = router.asPath.split('/')[1] as GroupType;
   const activePage = router.asPath.split('/')[2];
 
   const renderGroup = (type: GroupType) => {
@@ -90,7 +91,7 @@ function Content({ isTouchDevice = false }: { isTouchDevice?: boolean }) {
         <MobileNavigationGroup
           key={type}
           header={isGuideline ? 'Core Guidelines' : 'Components'}
-          initialCollapsed={!router.asPath.includes(type)}
+          initialCollapsed={activeType !== type}
         >
           {items.map(item => {
             const path =
